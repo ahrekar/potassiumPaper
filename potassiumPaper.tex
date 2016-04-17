@@ -92,7 +92,11 @@ and \ref{angularMomentum}
 		{\schr} equation with $V=-e^2/r$. 
 
 		\begin{equation}
-			\{\frac{d^2}{dr^2}+\frac{2m}{\hbar}[E + \frac{e^2}{r} - \frac{l(l+1)\hbar^2}{2mr^2}]\}\psi=0
+		  H\psi = E\psi
+		\end{equation}
+		where the Hamiltonian $H$ is 
+		\begin{equation}
+			H=-\frac{d^2}{dr^2}-\frac{2m}{\hbar}\Big[-\frac{e^2}{r} + \frac{l(l+1)\hbar^2}{2mr^2}\Big]
 		\end{equation}
 		
 		Since this is a spherically
@@ -135,10 +139,40 @@ and \ref{angularMomentum}
         we will introduce Dirac Bra-Ket notation. In 
         Bra-Ket notation a state is identified by 
         either a ``bra" $\bra{n}$
-        or a ``ket" $\ket{n}$
+        or a ``ket" $\ket{n}$. Here, the n represents the energy
+		level of the state. In our simplistic description thus far, 
+		this is all we need to describe the state.
+		As we add in more detailed descriptions of 
+		the state, we will add in variables to completely 
+		describe the state.
 
-		Before 
-		further discussing this importance, the deviation of the alkali
+		The transition from one state to another in optical pumping
+		will occur because of laser light incident on the electron.
+		To account for this additional energy added into the system 
+		we must augment
+		our previous Hamiltonian. We call the Hamiltonian without 
+		the energy from the light the unperturbed Hamiltonian and 
+		give it the variable name $H_o$.
+		\begin{equation}
+			H_o=-\frac{d^2}{dr^2}-\frac{2m}{\hbar}\Big[-\frac{e^2}{r} + \frac{l(l+1)\hbar^2}{2mr^2}\Big]
+		\end{equation}
+		The energy from the light is called a pertubation and we
+		can write its contribution to the atom as 
+		\begin{equation}
+			H_1=\frac{e}{2mc} \vec{A_o} \cdotp \vec{P}
+		\end{equation}
+
+		In the above expression, $e$ , $m$, and $p$ represent the charge, mass,
+		and momentum of the electron, respectively. The variable $c$ represents
+		the speed of light and $A$ represents the vector potential. 
+		Here we are leaving out the derivation of this term and
+		its time dependence because they will not be directly 
+		relevant to optical pumping. Additionally, we have taken
+		the electric dipole approximation. The interested reader should
+		consult other texts for further information about the 
+		pertubation and the approximation we make here. 
+
+		Before further discussing this importance, the deviation of the alkali
 		metals energy levels from the above hydrogen energies will be
 		discussed. 
 			The alkali atoms will have a similar energy spectrum to
