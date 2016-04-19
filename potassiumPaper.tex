@@ -87,7 +87,7 @@ and \ref{angularMomentum}
 	Optical pumping. If the reader is not familiar with the 
 	concepts, any elementary quantum mechanics textbook
 	such as Shankar could be used to alleviate confusion.
-		\subsubsection{Energy Levels}\label{energyLevels}
+		\subsubsection{Radial Solution Energy Levels}\label{energyLevels}
 		The energy levels for hydrogen are found by solving the
 		{\schr} equation with $V=-e^2/r$. 
 
@@ -200,7 +200,7 @@ and \ref{angularMomentum}
         indpendent of $n$, changing significantly only with 
         the value of $l$.
 
-		\subsubsection{Angular Momentum}
+		\subsubsection{Angular Momentum}\label{angularMomentum}
         Previously, we arrived at our solution for the energy levels
         of hydrogen by just considering the radial part of the
         equation. We will now discuss the important concepts related
@@ -209,9 +209,22 @@ and \ref{angularMomentum}
         Like the radial part, 
         we also find out that the angular part has solutions that 
         are quantized. We denote these discrete values that a state
-		can occupy by the variable $l$. This 
+		can occupy by the variable $l$. This value serves as an
+		indication to the amount of angular momentum that the 
+		system has. A natural assumption might then be that
+		the energy equation would have $l$ dependence; if 
+		something is spinning more (has a higher value 
+		of $l$) it should have more energy. This, however is not
+		the case. The quantum number $l$ has no effect on the 
+		energy of the system. The source of this degeneracy stems from 
+		the conservation of the Runge-Lenz vector.
 
-        \label{angularMomentum}
+		There is a second quantum number, $m$, which is associated 
+		with the angular momentum $l$. This value serves to indicate
+		how much of the angular momentum is spinning in a arbitrarily
+		chosen direction. Most commonly, this direction is chosen
+		to be in the $z$ direction. 
+
 		\subsubsection{Selection Rules}\label{selectionRules}
 
 	\subsection{Weak Magnetic Field}
@@ -230,23 +243,6 @@ and \ref{angularMomentum}
 	\subsection{Pumping}
 
 \section{Conclusion}
-
-the available values of the mixing element $\theta_{13}$.
-\begin{equation}
-	U=
-	\begin{pmatrix}
-		c_{12}c_{13} & s_{12}c_{13} & s_{13}e^{-i\delta}\\
-		-s_{12}c_{23} -c_{12}s_{23}s_{13}e^{i\delta} & c_{12}c_{23} -s_{12}s_{23}s_{13}e^{i\delta} & s_{23}c_{13}\\
-		s_{12}s_{23} -c_{12}c_{23}s_{13}e^{i\delta} & -c_{12}s_{23} -s_{12}c_{23}s_{13}e^{i\delta} & c_{23}c_{13}\\
-	\end{pmatrix}
-\end{equation}
-
-\begin{equation}
-	\begin{aligned}
-		P(\nu_e \rightarrow \nu_\mu) = \sin[2](\theta_{23})\sin[2](2\theta_{13})
-		\sin[2](\dfrac{1.27\Delta m^2L}{E})
-	\end{aligned}
-\end{equation}
 
 \bibliographystyle{plain}
 \bibliography{bibPotassium}
