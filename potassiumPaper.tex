@@ -11,6 +11,8 @@
 % Shortcuts
 
 \newcommand{\schr}{Schr\"odinger}
+\newcommand{\xhat}{\hat{\textbf{x}}}
+\newcommand{\yhat}{\hat{\textbf{y}}}
 
 % End Shortcuts
 \begin{document}
@@ -43,7 +45,7 @@ transfer the spin of the rubidium vapor to the electrons, and the
 result is a polarized electron beam. This approach makes intuitive
 sense.
 
-Another research group, Swensens, obtains the polarized electrons
+Another research group in Wisconsin polarizes their alkali metal
 in a different manner~\cite{swenson}. They pump their alkali metal, 
 potassium, with
 \emph{linearly} polarized light, perpendicular to the direction
@@ -51,9 +53,10 @@ of propagation of the electrons. This also must be done in the
 presence of a magnetic field. The result is the same, a collection
 of spin polarized alkali metal atoms, which could be used to create
 a spin polarized electron beam. The goal of this paper is to thoroughly
-explain how both of these approaches achieve the same result, as well 
-as to examine the feasibility of performing this experiment in our
-lab group.
+explain how both of these approaches achieve a circularly polarized
+alkali metal vapor, as well 
+as to examine the feasibility of using linearly polarized light
+for polarization in our own apparatus.
 
 This goal will  be accomplished by first explaining the basics 
 of atomic physics for pumping alkali atoms, including notation, energy
@@ -101,7 +104,7 @@ and \ref{angularMomentum}
 		
 		Since this is a spherically
 		symmetric potential, the Hamiltonian and angular momentum
-		operators commute and we can split the wavefuntion into a
+		operators commute and we can split the wave function into a
 		radial part and an angular part. 
 		\begin{equation}
 			\psi(r,\theta,\phi)=R(r)Y(\theta,\phi)
@@ -118,7 +121,7 @@ and \ref{angularMomentum}
 		quantized is of central importance to optical pumping. 
 		Each energy level from the equation above 
 		corresponds to a certain configuration of the 
-		atom, or a state. The atom can transistion 
+		atom, or a state. The atom can transition 
         between these states
 		only if a special set of rules is fulfilled. 
         For our description so far, the only requirement
@@ -156,7 +159,7 @@ and \ref{angularMomentum}
 		\begin{equation}
 			H_o=-\frac{d^2}{dr^2}-\frac{2m}{\hbar}\Big[-\frac{e^2}{r} + \frac{l(l+1)\hbar^2}{2mr^2}\Big]
 		\end{equation}
-		The energy from the light is called a pertubation and we
+		The energy from the light is called a perturbation and we
 		can write its contribution to the atom as 
 		\begin{equation}
 			H_1=\frac{e}{2mc} \vec{A_o} \cdotp \vec{P}
@@ -170,7 +173,7 @@ and \ref{angularMomentum}
 		relevant to optical pumping. Additionally, we have taken
 		the electric dipole approximation. The interested reader should
 		consult other texts for further information about the 
-		pertubation and the approximation we make here. 
+		perturbation and the approximation we make here. 
 
         Though we provided this specific example of the perturbing 
         Hamiltonian being electromagnetic radiation, we will also 
@@ -180,7 +183,7 @@ and \ref{angularMomentum}
 		Before continuing on to a discussion of angular momentum, 
 		we will begin our discussion of how the alkali metals differ
 		from hydrogen. The alkali metals are unique because they have
-        one more electron than the inert nobel gases. 
+        one more electron than the inert noble gases. 
         The electrons that were part of the noble gas configuration 
         screen all but one of the positive charges the nucleus, leaving the effective
         charge as just a single proton. It then becomes clear why Hydrogen 
@@ -188,16 +191,16 @@ and \ref{angularMomentum}
         The energy level equation is just slightly modified. A common
         expression for the modified energies is
 
-		\begin{equation}
+		\begin{equation}\label{modEnergy}
             E_n=\frac{-me^4}{2\hbar^2(n-\delta(l))^2},\quad n=1,2,3,...
 		\end{equation}
 
         Here $\delta$ is a function called the quantum defect which
-        depends on the quantum number l, representing angular momentum.
+        depends on the quantum number $l$, representing angular momentum.
         Angular momentum is the subject of the next section, and we 
         will discuss this dependence further in that section.
         It is interesting to note that $\delta$ is ``very nearly"
-        indpendent of $n$, changing significantly only with 
+        independent of $n$, changing significantly only with 
         the value of $l$.
 
 		\subsubsection{Angular Momentum}\label{angularMomentum}
@@ -224,17 +227,32 @@ and \ref{angularMomentum}
 		the energy equation would have $l$ dependence; if 
 		something is spinning more (has a higher value 
 		of $l$) it should have more energy. This, however is not
-		the case. The quantum number $l$ has no effect on the 
+		the case for hydrogen; the quantum number $l$ has no effect on the 
 		energy of the system. The source of this degeneracy stems from 
 		the conservation of the Runge-Lenz vector.
-		The allowed values of $l$ are determined when solving
+
+		The alkali metals, on the other hand, do change energy levels with
+		increasing $l$. This can be seen in eq. (\ref{modEnergy}) where 
+		the quantum defect
+		is subtracted from the denominator, making the term larger and the
+		energy more negative.
+		This difference is most pronounced for low values 
+		of $l$, and once the electron reaches the d orbital the difference
+		all but disappears. In our application of optical pumping,
+		we focus on this difference between different levels of $l$,
+		often pumping between these states.
+		
+		Whether hydrogen or alkali metal, the allowed values of $l$ are determined when solving
 		the radial energy equation. We find that
 
 		\begin{equation}
 			l=n-k-1,\quad k=0,1,2,3,...,n
 		\end{equation}
 
-		so $l$ has a maximum value of $n-1$. In atomic physics, 
+		so $l$ has a maximum value of $n-1$. To aid in making
+		these orbitals easier to discuss, we introduce 
+		spectroscopic notation which is commonly used in the 
+		literature. In this notation
 		each value of $l$ is associated with a letter to indicate
 		the shape of the atomic orbitals. When $l=0$, we name the 
 		orbital shape S. As $l$ increases, the subsequent orbitals
@@ -246,7 +264,7 @@ and \ref{angularMomentum}
 		the orbital level occupied by the atom is $nl$, where $n$
 		represents the energy level and $l$ represents the orbital
 		occupied. For example, if the electron is in the 4th energy
-		level and has 0 angular mometum, we would say that it is
+		level and has 0 angular momentum, we would say that it is
 		an electron in the 4S state. We will return to augment this 
 		notation after introducing the electrons intrinsic angular
 		momentum.
@@ -262,13 +280,14 @@ and \ref{angularMomentum}
         of the same thing spinning in another. 
 
         The independence of the energy levels from $m$ is only true
-        if the electron is a spinless particle. It is a well known
-        fact, however, that the electron does posess an intrinsic 
-        angular momentum or spin. We will come to a discussion of 
+        if the electron is a spin-less particle. It is a well known
+        fact, however, that the electron does possess an intrinsic 
+        angular momentum or ``spin." We will come to a discussion of 
         how this contributes to the energy levels in a moment, but 
         for now, simply note that the electron has an angular 
         momentum associated with it. The quantum number associated
-        with this angular momentum is $S$ and the values it can take 
+        with this angular momentum is $S$. It is a vector 
+		quantity, and the values it can take 
         on are $+1/2$ and $-1/2$.
 
         These angular momentum variables associated with the
@@ -286,35 +305,45 @@ and \ref{angularMomentum}
         shorthand description of the atomic states to include
         this information. We now include a subscript after
         the atomic orbital letter to indicate the total angular
-        momentum ($\abs{\vec{J}}$) of that state. For example, 
+        momentum ($\abs{\vec{J}}$) of that state. In general
+		this means the state we be noted as $NL_{J}$. For 
+		a specific example, 
         a spin up electron ($S=1/2$) in the $n=4$ state with 
         0 orbital angular momentum ($L=0$ , $J=1/2$) would be 
         described by $4S_{1/2}$.
 
-        The electron is not the only particle with an instrinsic
-        angular momentum. Protons and neutrons have it as well
+        The electron is not the only particle with an intrinsic
+        angular momentum. Protons and neutrons have it as well,
         meaning the nucleus of our atom will also have a
         spin which will contribute to the energy. The variable
         associated with nuclear angular momentum is $I$ and
         for the most common isotope of potassium, its values
         range between $+4$ and $-4$ in integer steps. 
+	
+		This completes our discussion of the angular momentum
+		of the atom, but our discussion of angular momentum in 
+		general would not be complete without mentioning light.
+		Photons are known to have spin and can thus carry 
+		angular momentum as well. Though photons are mentioned
+		here to introduce source of the angular momentum,
+		we will primarily deal with
+		electromagnetic radiation in the macroscopic sense, 
+		that is to say, with the electric field. Here, we 
+		observe angular momentum in the polarization of 
+		electromagnetic radiation. If an electric field has
+		circular polarization in the z-direction, we can 
+		describe it as:
 
-        Angular Momentum of light?
+		\begin{equation}
+			\vec{E}=-E_o \xhat  +iE_o \yhat 
+		\end{equation}
 
-        Energy splitting due to fine structure?
-
-        Energy splitting due to hyper-fine structure?
-
+		We will refer to this circularly polarized light as 
+		$\sigma^{+}$ or $\sigma^{-}$ light for right and 
+		left handed polarizations respectively.
 		\subsubsection{Selection Rules}\label{selectionRules}
 
         Irreducible Tensors?
-
-	\subsection{Weak Magnetic Field}
-		\subsubsection{Energy Levels}
-		\subsubsection{Coupling}
-		\subsubsection{Selection Rules}
-
-	\subsection{Strong Magnetic Field}
 
 \section{Longitudinal Optical Pumping}
 To describe the longitudinal optical pumping, I will
@@ -325,10 +354,44 @@ allowed transitions in the alkali atom will follow.
 	\subsection{Required Setup}
     Longitudinal optical pumping, the way our apparatus is 
     currently configured, requires a magnetic field and
-    circularly polarized light. 
-
+    circularly polarized light. The magnetic field
+	serves mainly to preserve the spin of the alkali
+	atoms over time. If the magnetic field were not 
+	present, the atoms would precess around whatever
+	residual magnetic field exists within the vicinity
+	of the apparatus and no longer be coherently pointing
+	in one direction. The circularly polarized light
+	is what allows us to orient the spins of the alkali
+	atoms in the same direction. To see how this is
+	achieved, we look at the allowed transitions for
+	an alkali atom interacting with circularly polarized
+	light. 
 
 	\subsection{Allowed Transitions}
+	The allowed transitions will come from the selection
+	rules for the interaction. Since we are pumping with
+	circularly polarized light, our electric field vector
+	will have a real part and an imaginary part:
+	
+	\begin{equation}
+		\vec{E}=-E_o \xhat  +iE_o \yhat 
+	\end{equation}
+
+	Putting this into irreducible tensor form, we have 
+
+	\begin{equation}
+		\vec{E}=E_1^1
+	\end{equation}
+
+	which will impart one unit of $l$ angular momentum,
+	and one unit of $m$ angular momentum. Therefore, if
+	our initial state is $\ket{nlm}$ our final state must
+	be $\bra{n(l+1)(m+1)}$
+
+	In atomic notation, if we were in the S state to begin
+	with, circularly polarized light will take us to the
+	P state, and our angular momentum must change. Given
+	these rules alkali atoms will be pushed 
 
 \section{Transverse Optical Pumping}
 
@@ -336,7 +399,17 @@ allowed transitions in the alkali atom will follow.
 
 	\subsection{Allowed Transitions}
 
-	\subsection{Pumping}
+\section{Energy Splitting Due to a Magnetic Field}
+        Energy splitting due to fine structure?
+
+        Energy splitting due to hyper-fine structure?
+
+	\subsection{Weak Magnetic Field}
+		\subsubsection{Energy Levels}
+		\subsubsection{Coupling}
+		\subsubsection{Selection Rules}
+
+	\subsection{Strong Magnetic Field}
 
 \section{Conclusion}
 
