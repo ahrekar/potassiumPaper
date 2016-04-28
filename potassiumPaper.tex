@@ -5,16 +5,22 @@
 \usepackage{physics}
 \usepackage{amsmath}
 \usepackage{cite}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage[super]{natbib}
 \usepackage[margin=0.75in]{geometry}
 % End Packages
 
 % Shortcuts
-
 \newcommand{\schr}{Schr\"odinger}
 \newcommand{\xhat}{\hat{\textbf{x}}}
 \newcommand{\yhat}{\hat{\textbf{y}}}
-
 % End Shortcuts
+
+% Images Path
+\graphicspath{ {images/} }
+% End Images Path
+
 \begin{document}
 \title{A Review of Energy Splitting of Alkali Atoms in a Magnetic Field}
 \author{Karl Ahrendsen}
@@ -37,22 +43,26 @@ polarized electron source.
 Our research group has created a source of spin polarized
 electrons using spin-exchange interactions with the alkali metal
 rubidium.(CITATIONS, CITATIONS)  Our current method of obtaining 
-polarized electrons involves first polarizing a rubidium vapor
+polarized electrons involves optically pumping a rubidium vapor
 with circularly polarized light. Then an unpolarized electron beam
 is passed along the same path of the light 
 through the polarized vapor. Spin exchange interactions
 transfer the spin of the rubidium vapor to the electrons, and the 
 result is a polarized electron beam. This approach makes intuitive
-sense.
+sense; circularly polarized light goes in and the circular
+nature of the light causes things to start spinning.
 
 Another research group in Wisconsin polarizes their alkali metal
 in a different manner~\cite{swenson}. They pump their alkali metal, 
 potassium, with
 \emph{linearly} polarized light, perpendicular to the direction
-of propagation of the electrons. This also must be done in the
-presence of a magnetic field. The result is the same, a collection
+of propagation of the electrons. The result is the same, a collection
 of spin polarized alkali metal atoms, which could be used to create
-a spin polarized electron beam. The goal of this paper is to thoroughly
+a spin polarized electron beam. This approach is less intuitive
+because the light we are pumping with does not have an rotation 
+associate with it.
+
+The goal of this paper is to thoroughly
 explain how both of these approaches achieve a circularly polarized
 alkali metal vapor, as well 
 as to examine the feasibility of using linearly polarized light
@@ -67,17 +77,26 @@ field. Once these basics of pumping have been established we will
 examine the specific case of transverse optical pumping. 
 
 \section{Basics of Energy Levels of Alkali Atoms}
-The process of pumping a gas is based upon the transition
-of an atom from some ground state to an excited state. 
-It is therefore very important that one has a firm 
+The process of optically pumping a gas refers to the 
+act of moving a collection of atoms into the 
+same energy state. As a mechanical analogy, one could
+imagine that we have a bucket of atoms. The bucket 
+represents the energy level that the atoms
+occupy. We could put a hose into this
+bucket and take some of the atoms from one bucket and
+place them in another. In optical pumping, the role of 
+this pump is played by the laser. 
+
+To be able to understand how optical pumping works a firm 
 understanding of the quantum mechanics involved in this 
-process. For this reason, I begin with a review of the energy
+process is needed. For this reason, I begin with a review of the energy
 levels of an atom. For the sake of simplicity, I will complete
 this discussion using
 Hydrogen as the example atom, but the equations may be 
 easily adjusted to be appropriate for an alkali atom.
 These modifications will be discussed in Sections \ref{energyLevels}
-and \ref{angularMomentum}
+and \ref{angularMomentum}. Throughout this discussion
+the system of Gaussian units will be used. 
 	\subsection{No Magnetic Field}
     We begin describing the energy levels in the absence of 
     a magnetic field. This consists of a slow buildup 
@@ -89,7 +108,7 @@ and \ref{angularMomentum}
 	many main results of Quantum Mechanics relevant to 
 	Optical pumping. If the reader is not familiar with the 
 	concepts, any elementary quantum mechanics textbook
-	such as Shankar could be used to alleviate confusion.
+	such as Shankar~\cite{shankar} could be used to alleviate confusion.
 		\subsubsection{Radial Solution Energy Levels}\label{energyLevels}
 		The energy levels for hydrogen are found by solving the
 		{\schr} equation with $V=-e^2/r$. 
@@ -112,7 +131,7 @@ and \ref{angularMomentum}
 
 		By examining only the radial part, we find that the energies
 		are quantized and correspond to the values:
-		\begin{equation}
+		\begin{equation}\label{energyLevels}
 			E_n=\frac{-me^4}{2\hbar^2n^2},\quad n=1,2,3,...
 		\end{equation}
 
@@ -121,16 +140,16 @@ and \ref{angularMomentum}
 		quantized is of central importance to optical pumping. 
 		Each energy level from the equation above 
 		corresponds to a certain configuration of the 
-		atom, or a state. The atom can transition 
-        between these states
+		atom, or a state. If the atom starts in one state, it can 
+		transition to another, but
 		only if a special set of rules is fulfilled. 
-        For our description so far, the only requirement
-        to allow a transition between states
-        is that additional energy, usually in the 
-        form of electromagnetic radiation, 
-        equal to the difference
-        between the energy levels is put into the system. 
-        More of these restrictions will appear as we
+        For our description so far, there is only one rule;
+		whatever the difference between the energy levels is, 
+		an equal amount must be input into the atom from an outside
+		source. For optical pumping, this outside source
+		is the electromagnetic radiation from the pumping laser.
+	
+        More of these rules will appear as we
         expand our description of the hydrogen atom.
         In general, these restrictions 
         are called selection rules and will be further
@@ -142,11 +161,14 @@ and \ref{angularMomentum}
         we will introduce Dirac Bra-Ket notation. In 
         Bra-Ket notation a state is identified by 
         either a ``bra" $\bra{n}$
-        or a ``ket" $\ket{n}$. Here, the n represents the energy
-		level of the state. In our simplistic description thus far, 
+        or a ``ket" $\ket{n}$. Here, $n$ is a quantum number
+		which indicates the excitation level of the state.
+		It is the same $n$ which is seen in Eq.(\ref{energyLevels}). 
+		In our simplistic description thus far, 
 		this is all we need to describe the state.
 		As we add in more detailed descriptions of 
-		the state, we will add in variables to completely 
+		the state, we will require additional quantum
+		numbers to completely 
 		describe the state.
 
 		The transition from one state to another in optical pumping
@@ -167,12 +189,15 @@ and \ref{angularMomentum}
 
 		In the above expression, $e$ , $m$, and $p$ represent the charge, mass,
 		and momentum of the electron, respectively. The variable $c$ represents
-		the speed of light and $A$ represents the vector potential. 
+		the speed of light and $\vec{A_o}$ represents the time-independent 
+		vector potential ($\vec{A}(t)=\vec{A_o}e^{-i\omega t}$). 
 		Here we are leaving out the derivation of this term and
 		its time dependence because they will not be directly 
-		relevant to optical pumping. Additionally, we have taken
-		the electric dipole approximation. The interested reader should
-		consult other texts for further information about the 
+		relevant to our discussion of optical pumping. Additionally, 
+		we have taken the electric dipole approximation to simplify
+		the discussion. 
+		The interested reader should
+		consult other texts, such as Shankar, for further information about the 
 		perturbation and the approximation we make here. 
 
         Though we provided this specific example of the perturbing 
@@ -182,13 +207,31 @@ and \ref{angularMomentum}
 
 		Before continuing on to a discussion of angular momentum, 
 		we will begin our discussion of how the alkali metals differ
-		from hydrogen. The alkali metals are unique because they have
-        one more electron than the inert noble gases. 
-        The electrons that were part of the noble gas configuration 
-        screen all but one of the positive charges the nucleus, leaving the effective
-        charge as just a single proton. It then becomes clear why Hydrogen 
-        atom is a good approximation of the alkali metals. 
-        The energy level equation is just slightly modified. A common
+		from hydrogen. The alkali metals occupy the the left-most
+		column in the periodic table (Fig. \ref{periodicTable}), 
+		indicating that they have one
+		electron in their outermost energy level, a valence electron,
+		and all energy sublevels filled. 
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=\textwidth]{periodicTable}
+			\caption{\label{periodicTable}The periodic table 
+				of elements. The alkali metals 
+			are in group 1 and indicated by the red boxes. Image
+			used under creative commons license and obtained
+			from Wikipedia~\cite{periodicWiki}.}
+		\end{figure}
+		The lower energy level
+		electrons screen the charge of the nucleus, leaving the effective
+		charge that the valence electron experiences 
+        a single elementary charge. The connection between the alkalis
+		and Hydrogen is then apparent, hydrogen is a single negative charge
+		orbiting a single positive charge and the alkalis are a single
+		negative charge orbiting a combination of charges which 
+		can be approximated to be a single positive charge.
+        Because the lower energy level electrons do not always completely
+		mask the charges in the nucles, the energy level equation 
+		needs to be modified. A common
         expression for the modified energies is
 
 		\begin{equation}\label{modEnergy}
@@ -199,9 +242,6 @@ and \ref{angularMomentum}
         depends on the quantum number $l$, representing angular momentum.
         Angular momentum is the subject of the next section, and we 
         will discuss this dependence further in that section.
-        It is interesting to note that $\delta$ is ``very nearly"
-        independent of $n$, changing significantly only with 
-        the value of $l$.
 
 		\subsubsection{Angular Momentum}\label{angularMomentum}
 		There are many aspects of angular momentum to consider
@@ -221,14 +261,16 @@ and \ref{angularMomentum}
         Like the radial part, 
         we also find out that the angular part has solutions that 
         are quantized. We denote these discrete values that a state
-		can occupy by the variable $l$. This value serves as an
-		indication to the amount of angular momentum that the 
+		can occupy by the quantum number $l$. This value serves as an
+		indication to the amount of orbital angular momentum that the 
 		system has. A natural assumption might then be that
 		the energy equation would have $l$ dependence; if 
-		something is spinning more (has a higher value 
+		something is orbiting ``more" (has a higher value 
 		of $l$) it should have more energy. This, however is not
-		the case for hydrogen; the quantum number $l$ has no effect on the 
-		energy of the system. The source of this degeneracy stems from 
+		the case for hydrogen. The quantum number $l$ has no effect on the 
+		energy of the system. Whenever a quantum number does not
+		have an effect on the energy of the systme, it is said to
+		be degenerate. All The source of this degeneracy stems from 
 		the conservation of the Runge-Lenz vector.
 
 		The alkali metals, on the other hand, do change energy levels with
@@ -242,7 +284,8 @@ and \ref{angularMomentum}
 		we focus on this difference between different levels of $l$,
 		often pumping between these states.
 		
-		Whether hydrogen or alkali metal, the allowed values of $l$ are determined when solving
+		Whether hydrogen or alkali metal, the allowed 
+		values of $l$ are determined when solving
 		the radial energy equation. We find that
 
 		\begin{equation}
