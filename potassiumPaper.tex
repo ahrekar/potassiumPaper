@@ -8,6 +8,7 @@
 \usepackage{mathtools}
 \usepackage{graphicx}
 \usepackage[super]{natbib}
+%\usepackage[super]{bib}
 \usepackage[margin=0.75in]{geometry}
 % End Packages
 
@@ -207,11 +208,11 @@ the system of Gaussian units will be used.
 
 		Before continuing on to a discussion of angular momentum, 
 		we will begin our discussion of how the alkali metals differ
-		from hydrogen. The alkali metals occupy the the left-most
+		from hydrogen. The alkali metals occupy the left-most
 		column in the periodic table (Fig. \ref{periodicTable}), 
 		indicating that they have one
 		electron in their outermost energy level, a valence electron,
-		and all energy sublevels filled. 
+		and all energy sub-levels filled. 
 		\begin{figure}[ht]
 			\centering
 			\includegraphics[width=\textwidth]{periodicTable}
@@ -230,7 +231,7 @@ the system of Gaussian units will be used.
 		negative charge orbiting a combination of charges which 
 		can be approximated to be a single positive charge.
         Because the lower energy level electrons do not always completely
-		mask the charges in the nucles, the energy level equation 
+		mask the charges in the nucleus, the energy level equation 
 		needs to be modified. A common
         expression for the modified energies is
 
@@ -269,13 +270,13 @@ the system of Gaussian units will be used.
 		of $l$) it should have more energy. This, however is not
 		the case for hydrogen. The quantum number $l$ has no effect on the 
 		energy of the system. Whenever a quantum number does not
-		have an effect on the energy of the systme, it is said to
+		have an effect on the energy of the system, it is said to
 		be degenerate. The source of this degeneracy is sometimes said 
 		to be ``accidental," but in reality stems from 
 		the conservation of the Runge-Lenz vector.
 
 		The alkali metals, on the other hand, do change energy levels with
-		increasing $l$. This can be seen in eq. (\ref{modEnergy}) where 
+		increasing $l$. This can be seen in Eq. (\ref{modEnergy}) where 
 		the quantum defect
 		is subtracted from the denominator, making the term larger and the
 		energy more negative.
@@ -350,7 +351,7 @@ the system of Gaussian units will be used.
 
         These angular momentum variables associated with the
         electron are often combined to simplify notation. We
-        introduce a new quantum number $J$ which is equal to
+        introduce a new quantum number $j$ which is equal to
         the vector sum of the orbital angular momentum of the
         electron with the spin angular momentum of the electron,
         like so: 
@@ -360,7 +361,7 @@ the system of Gaussian units will be used.
         \end{equation}
 
         Now that we have discussed spin, we need to modify our 
-        shorthand description of the atomic states to include
+        spectroscopic notation of the atomic states to include
         this information. There are three changes that need to 
 		be made. First, the lowercase letters are changed to
 		uppercase letters. Second, we now include a subscript after
@@ -369,7 +370,7 @@ the system of Gaussian units will be used.
 		Third, we append a superscript $2s+1$ to the left of
 		the atomic orbital letter to indicate the number of
 		spin projections available. In general
-		this means the state we be noted as $N\prescript{2s+1}{}L_{J}$. For 
+		this means the state we be noted as $n\prescript{2s+1}{}l_{J}$. For 
 		a specific example, 
         a spin up electron ($s=1/2$) in the $n=4$ state with 
         0 orbital angular momentum ($l=0$ , $j=1/2$) would be 
@@ -406,7 +407,7 @@ the system of Gaussian units will be used.
 		circular polarization in the z-direction, we can 
 		describe it as:
 
-		\begin{equation}
+		\begin{equation}\label{circleLight}
 			\vec{E}=-E_o \xhat  +iE_o \yhat 
 		\end{equation}
 
@@ -434,14 +435,67 @@ the system of Gaussian units will be used.
 		$q$ angular momentum to that state. The angular momentum
 		of the initial state plus the operator must be
 		equal to the angular momentum of the final state. In
-		equation form, we write this as: 
+		terms of an equation, we write this as: 
 
 		\begin{equation}
-			\bra{\alpha'j'm'}T^{q}_{k}\ket{\alpha jm}\quad \textrm{unless} \quad k+j\geq j' 
+			\bra{\alpha'j'm'}T^{q}_{k}\ket{\alpha jm}=0\quad \textrm{unless} \quad k+j\geq j' 
 			\geq \vert k-j \vert,\quad m'=m+q
 		\end{equation}
 
+		How do we write the electric field (our most common
+		operator on the state) in terms of an irreducible 
+		tensor? The irreducible tensor notation of the 
+		electric field is equal to a linear combination of
+		the vector components. This relationship is as 
+		follows:
 
+		%\begin{equation}
+			\begin{gather}
+			T^{\pm1}_1 = \mp \frac{V_x \pm iV_y}{2^{1/2}} \equiv V^{\pm1}_{1} 
+			\\
+			T^{0}_1 = V_z \equiv V^{0}_{1} 
+			\end{gather}
+		%\end{equation}
+
+		Therefore our electric field in Eq. (\ref{circleLight}) can
+		be written in irreducible tensor form as $E^{1}_1$ and 
+		would modify both the $j$ and $m$ 
+		quantum numbers.
+\subsection{With Magnetic Field}
+	In the presence of a magnetic field, our energy levels will be modified.
+	The magnetic moment from the spin of the electron will interact
+	with the field, and one spin direction will have a 
+	higher energy than the other. These effects are
+	visible even before applying an external 
+	magnetic field. To see how this arises, 
+	consider the orbiting electron
+	when viewed in its own rest frame. From this
+	perspective the  
+	proton is orbiting it. Moving charges
+	are currents, so the proton creates a
+	magnetic field with which the spin of the electron 
+	interacts. As should be obvious from the way my paper
+	has been written thus far, I would love to explain this
+	in further detail, but I think I should try to explain
+	more higher level concepts with the time that I have
+	remaining to write this paper. 
+	The relevant information to my later discussion
+	is that this interaction between the spin of the 
+	electron and the proton's "current" will cause
+	the energy of the electron to be different depending
+	on the orientation of its spin. This difference is 
+	important because otherwise there would be no difference
+	in energy between a $4\prescript{2}{}P_{1/2}$ with 
+	$m_s=1/2$ and $4\prescript{2}{}S_{1/2}$ with $m_s=-1/2$.
+	Because of this difference in energies, called fine-structure
+	splitting
+
+%	\subsection{Weak Magnetic Field}
+%		\subsubsection{Energy Levels}
+%		\subsubsection{Coupling}
+%		\subsubsection{Selection Rules}
+%
+%	\subsection{Strong Magnetic Field}
 
 \section{Longitudinal Optical Pumping}
 To describe the longitudinal optical pumping, I will
@@ -466,7 +520,12 @@ allowed transitions in the alkali atom will follow.
 	light. 
 
 	\subsection{Allowed Transitions}
-	The allowed transitions will come from the selection
+	The electrons in the potassium will start in the ground
+	state and be randomly oriented either up or down.
+	We note these states by $4\prescript{2}{}S_{1/2}$ and 
+	$4\prescript{2}{}S_{-1/2}$. 
+	Which states they can transition, or be pumped to, 
+	will be determined by the selection
 	rules for the interaction. Since we are pumping with
 	circularly polarized light, our electric field vector
 	will have a real part and an imaginary part:
@@ -478,18 +537,15 @@ allowed transitions in the alkali atom will follow.
 	Putting this into irreducible tensor form, we have 
 
 	\begin{equation}
-		\vec{E}=E_1^1
+		\vec{E} \rightarrow E_1^1
 	\end{equation}
 
 	which will impart one unit of $l$ angular momentum,
 	and one unit of $m$ angular momentum. Therefore, if
-	our initial state is $\ket{nlm}$ our final state must
-	be $\ket{n(l+1)(m+1)}$
-
-	In atomic notation, if we were in the S state to begin
-	with, circularly polarized light will take us to the
-	P state, and our angular momentum must change. Given
-	these rules alkali atoms will be pushed 
+	our initial state is $\ket{njm}$ our final state must
+	be $\ket{n(j+1)(m+1)}$. In the literature, this is more
+	commonly described in spectroscopic notation 
+	Since we are pumping with light that 
 
 \section{Transverse Optical Pumping}
 
@@ -497,17 +553,9 @@ allowed transitions in the alkali atom will follow.
 
 	\subsection{Allowed Transitions}
 
-\section{Energy Splitting Due to a Magnetic Field}
         Energy splitting due to fine structure?
 
         Energy splitting due to hyper-fine structure?
-
-	\subsection{Weak Magnetic Field}
-		\subsubsection{Energy Levels}
-		\subsubsection{Coupling}
-		\subsubsection{Selection Rules}
-
-	\subsection{Strong Magnetic Field}
 
 \section{Conclusion}
 
