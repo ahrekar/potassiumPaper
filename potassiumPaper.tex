@@ -474,21 +474,17 @@ the system of Gaussian units will be used.
 	proton is orbiting it. Moving charges
 	are currents, so the proton creates a
 	magnetic field with which the spin of the electron 
-	interacts. As should be obvious from the way my paper
-	has been written thus far, I would love to explain this
-	in further detail, but I think I should try to explain
-	more higher level concepts with the time that I have
-	remaining to write this paper. 
-	The relevant information to my later discussion
-	is that this interaction between the spin of the 
+	interacts. This interaction between the spin of the 
 	electron and the proton's "current" will cause
 	the energy of the electron to be different depending
 	on the orientation of its spin. This difference is 
-	important because otherwise there would be no difference
-	in energy between a $4\prescript{2}{}P_{1/2}$ with 
-	$m_s=1/2$ and $4\prescript{2}{}S_{1/2}$ with $m_s=-1/2$.
-	Because of this difference in energies, called fine-structure
-	splitting
+	important because otherwise there would be no 
+	selection rule to distinguish
+	between a $4\prescript{2}{}P_{1/2}$ with 
+	$m_s=1/2$ and $4\prescript{2}{}P_{1/2}$ with $m_s=-1/2$.
+	Because of this difference in energies, called 
+	fine-structure, we can isolate transistions to take
+	the electron to a specific spin state.
 
 %	\subsection{Weak Magnetic Field}
 %		\subsubsection{Energy Levels}
@@ -496,6 +492,8 @@ the system of Gaussian units will be used.
 %		\subsubsection{Selection Rules}
 %
 %	\subsection{Strong Magnetic Field}
+%		Energy splitting due to fine structure?
+%		Energy splitting due to hyper-fine structure?
 
 \section{Longitudinal Optical Pumping}
 To describe the longitudinal optical pumping, I will
@@ -514,16 +512,15 @@ allowed transitions in the alkali atom will follow.
 	of the apparatus and no longer be coherently pointing
 	in one direction. The circularly polarized light
 	is what allows us to orient the spins of the alkali
-	atoms in the same direction. To see how this is
-	achieved, we look at the allowed transitions for
-	an alkali atom interacting with circularly polarized
-	light. 
+	atoms in the same direction. We can choose either 
+	$\sigma^{+}$ or $\sigma^{-}$ for this, but for 
+	definiteness, let us choose $\sigma^{+}$
 
 	\subsection{Allowed Transitions}
 	The electrons in the potassium will start in the ground
 	state and be randomly oriented either up or down.
-	We note these states by $4\prescript{2}{}S_{1/2}$ and 
-	$4\prescript{2}{}S_{-1/2}$. 
+	Both of these states are described by 
+	$4\prescript{2}{}S_{1/2}$.
 	Which states they can transition, or be pumped to, 
 	will be determined by the selection
 	rules for the interaction. Since we are pumping with
@@ -531,31 +528,65 @@ allowed transitions in the alkali atom will follow.
 	will have a real part and an imaginary part:
 	
 	\begin{equation}
-		\vec{E}=-E_o \xhat  +iE_o \yhat 
+		\vec{E}=E_o \xhat  -iE_o \yhat 
 	\end{equation}
 
 	Putting this into irreducible tensor form, we have 
 
 	\begin{equation}
-		\vec{E} \rightarrow E_1^1
+		\vec{E} \rightarrow E_{1}^1
 	\end{equation}
 
-	which will impart one unit of $l$ angular momentum,
-	and one unit of $m$ angular momentum. Therefore, if
+	which will impart one vector unit of $l$ angular momentum,
+	and subract unit of $m$ angular momentum. Therefore, if
 	our initial state is $\ket{njm}$ our final state must
-	be $\ket{n(j+1)(m+1)}$. In the literature, this is more
-	commonly described in spectroscopic notation 
-	Since we are pumping with light that 
+	be $\ket{n(j\pm1)(m-1)}$. 	
+
+	In the literature, this is more
+	commonly described in spectroscopic notation. If we begin 
+	with a spin-down electron, we would have the transisition
+	$4\prescript{2}{}S_{1/2} \rightarrow 4\prescript{2}{}P_{3/2}$
+	for our electron.
+	On the other hand, if we began with a spin-up electron, we 
+	would get 
+	$4\prescript{2}{}S_{1/2} \rightarrow 4\prescript{2}{}P_{1/2}$
+	for our electron transistion. Fine structure splitting 
+	allows us to tune our laser to a frequency that matches 
+	the energy difference of only one of these transistions. 
+	Again, the choice is arbitrary, but for definiteness let us
+	choose the second of these transistions. 
+
+	After being excited, the electron will eventually decay
+	down to the ground state. When it does this, it can go to
+	either the spin-up ground state or the spin-down ground
+	state. These transistions do not have equal probability,
+	however, with the decay to the spin-up state being twice 
+	as likely~\cite{swenson}. 
+
+	The electrons that are in the spin-down state will remain
+	there, because there is no light incident on the system to 
+	excite them out of their ground state. The electrons that 
+	return to the spin-up state will again go through the same 
+	pumping process until they decay to the spin-down state.
+	By this process, we then create a population of spin-down
+	electrons. The electrons exchange their spin with 
+	the nucleus, thereby giving a collection of spin-polarized
+	potassium atoms. 
 
 \section{Transverse Optical Pumping}
-
+To describe transverse optical pumping, we will compare it to 
+linear pumping and identify the similarities and differences.
 	\subsection{Required Setup}
+	The required setup for transverse pumping also requires
+	a magnetic field for the same reasons as previously indicated
+	but this time linearly polarized light is necessary.
+	Furthermore, the polarization direction of the light
+	must be aligned to be parallel with the magnetic field
+	used to preserve the spins. For concreteness we assume
+	that the magnetic field is oriented in the z-direction.
 
 	\subsection{Allowed Transitions}
 
-        Energy splitting due to fine structure?
-
-        Energy splitting due to hyper-fine structure?
 
 \section{Conclusion}
 
