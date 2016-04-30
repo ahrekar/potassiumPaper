@@ -16,6 +16,7 @@
 \newcommand{\schr}{Schr\"odinger}
 \newcommand{\xhat}{\hat{\textbf{x}}}
 \newcommand{\yhat}{\hat{\textbf{y}}}
+\newcommand{\zhat}{\hat{\textbf{z}}}
 % End Shortcuts
 
 % Images Path
@@ -242,7 +243,7 @@ the system of Gaussian units will be used.
         Here $\delta$ is a function called the quantum defect which
         depends on the quantum number $l$, representing angular momentum.
         Angular momentum is the subject of the next section, and we 
-        will discuss this dependence further in that section.
+        will discuss this dependence further there.
 
 		\subsubsection{Angular Momentum}\label{angularMomentum}
 		There are many aspects of angular momentum to consider
@@ -291,7 +292,7 @@ the system of Gaussian units will be used.
 		the radial energy equation. We find that
 
 		\begin{equation}
-			l=n-k-1,\quad k=0,1,2,3,...,n
+			l=0,1,...,n-1
 		\end{equation}
 
 		so $l$ has a maximum value of $n-1$. To aid in making
@@ -325,12 +326,12 @@ the system of Gaussian units will be used.
 		is the projection it has in the given direction.
 		Most commonly, this direction is chosen
 		to be in the $z$ direction. We again find that the quantum
-        number $z$ has no effect on the angular momentum. This result
+        number $m$ has no effect on the angular momentum. This result
         is perhaps easier to identify, as the energy of something 
         orbiting in one direction should be the same as the energy 
         of the same thing orbiting in another. The values that the 
 		quantum number $m$ can hold are of course
-		closely related to $l$. They range from $+j$ to $-j$ in
+		closely related to $l$. They range from $+l$ to $-l$ in
 		integer steps. 
 
         The independence of the energy levels from $m$ is only true
@@ -364,13 +365,14 @@ the system of Gaussian units will be used.
         spectroscopic notation of the atomic states to include
         this information. There are three changes that need to 
 		be made. First, the lowercase letters are changed to
-		uppercase letters. Second, we now include a subscript after
+		uppercase letters (we indicate a generic orbital letter
+		by ``L". Second, we now include a subscript after
         the atomic orbital letter to indicate the total angular
-        momentum ($\vert\vec{J}\vert$) of that state. 
+        momentum $\vert\vec{J}\vert$ of that state. 
 		Third, we append a superscript $2s+1$ to the left of
 		the atomic orbital letter to indicate the number of
 		spin projections available. In general
-		this means the state we be noted as $n\prescript{2s+1}{}l_{J}$. For 
+		this means the state we be noted as $n\prescript{2s+1}{}L_{J}$. For 
 		a specific example, 
         a spin up electron ($s=1/2$) in the $n=4$ state with 
         0 orbital angular momentum ($l=0$ , $j=1/2$) would be 
@@ -408,13 +410,14 @@ the system of Gaussian units will be used.
 		describe it as:
 
 		\begin{equation}\label{circleLight}
-			\vec{E}=-E_o \xhat  +iE_o \yhat 
+			\vec{E}=-E_o \xhat  -iE_o \yhat 
 		\end{equation}
 
 		We will refer to this circularly polarized light as 
-		$\sigma^{+}$ or $\sigma^{-}$ light for right and 
-		left handed polarizations respectively.
-		
+		$\sigma^{+}$ light. By changing the sign on the 
+		x component of the vector, we can also generate 
+		an expression for $\sigma^{-}$ light.
+
 		\subsubsection{Selection Rules}\label{selectionRules}
 		We mentioned in Section \ref{energyLevels} that there
 		were selection rules between energy levels of an atom.
@@ -450,11 +453,12 @@ the system of Gaussian units will be used.
 		follows:
 
 		%\begin{equation}
-			\begin{gather}
-			T^{\pm1}_1 = \mp \frac{V_x \pm iV_y}{2^{1/2}} \equiv V^{\pm1}_{1} 
+		\begin{gather}
+			T^{\pm1}_1 = \mp \frac{V_x \pm iV_y}{2^{1/2}} 
+						\equiv V^{\pm1}_{1}\label{sphericalTensor} 
 			\\
 			T^{0}_1 = V_z \equiv V^{0}_{1} 
-			\end{gather}
+		\end{gather}
 		%\end{equation}
 
 		Therefore our electric field in Eq. (\ref{circleLight}) can
@@ -483,7 +487,7 @@ the system of Gaussian units will be used.
 	between a $4\prescript{2}{}P_{1/2}$ with 
 	$m_s=1/2$ and $4\prescript{2}{}P_{1/2}$ with $m_s=-1/2$.
 	Because of this difference in energies, called 
-	fine-structure, we can isolate transistions to take
+	fine-structure, we can isolate transitions to take
 	the electron to a specific spin state.
 
 %	\subsection{Weak Magnetic Field}
@@ -506,7 +510,7 @@ allowed transitions in the alkali atom will follow.
     currently configured, requires a magnetic field and
     circularly polarized light. The magnetic field
 	serves mainly to preserve the spin of the alkali
-	atoms over time. If the magnetic field were not 
+	atoms; If the magnetic field were not 
 	present, the atoms would precess around whatever
 	residual magnetic field exists within the vicinity
 	of the apparatus and no longer be coherently pointing
@@ -514,14 +518,14 @@ allowed transitions in the alkali atom will follow.
 	is what allows us to orient the spins of the alkali
 	atoms in the same direction. We can choose either 
 	$\sigma^{+}$ or $\sigma^{-}$ for this, but for 
-	definiteness, let us choose $\sigma^{+}$
+	definiteness, let us choose $\sigma^{-}$.
 
 	\subsection{Allowed Transitions}
 	The electrons in the potassium will start in the ground
 	state and be randomly oriented either up or down.
 	Both of these states are described by 
 	$4\prescript{2}{}S_{1/2}$.
-	Which states they can transition, or be pumped to, 
+	Which states they can transition, or be pumped, to 
 	will be determined by the selection
 	rules for the interaction. Since we are pumping with
 	circularly polarized light, our electric field vector
@@ -531,36 +535,38 @@ allowed transitions in the alkali atom will follow.
 		\vec{E}=E_o \xhat  -iE_o \yhat 
 	\end{equation}
 
-	Putting this into irreducible tensor form, we have 
+	Putting this into irreducible tensor form, 
+	from Eq. (\ref{sphericalTensor})
+	we have 
 
 	\begin{equation}
-		\vec{E} \rightarrow E_{1}^1
+		\vec{E} \rightarrow E^{-1}_1
 	\end{equation}
 
-	which will impart one vector unit of $l$ angular momentum,
-	and subract unit of $m$ angular momentum. Therefore, if
-	our initial state is $\ket{njm}$ our final state must
-	be $\ket{n(j\pm1)(m-1)}$. 	
+	which will impart one vector unit of $j$ angular momentum,
+	and subtract one unit of $m$ angular momentum. 
 
-	In the literature, this is more
+	In the literature, this is most
 	commonly described in spectroscopic notation. If we begin 
-	with a spin-down electron, we would have the transisition
+	with a spin-down electron, we would have the transition
 	$4\prescript{2}{}S_{1/2} \rightarrow 4\prescript{2}{}P_{3/2}$
 	for our electron.
 	On the other hand, if we began with a spin-up electron, we 
 	would get 
 	$4\prescript{2}{}S_{1/2} \rightarrow 4\prescript{2}{}P_{1/2}$
-	for our electron transistion. Fine structure splitting 
+	for our electron transition. Fine structure splitting 
 	allows us to tune our laser to a frequency that matches 
-	the energy difference of only one of these transistions. 
+	the energy difference of only one of these transitions. 
 	Again, the choice is arbitrary, but for definiteness let us
-	choose the second of these transistions. 
+	choose the second of these transitions. 
 
-	After being excited, the electron will eventually decay
+	After being excited to the P state, the electron will 
+	eventually decay
 	down to the ground state. When it does this, it can go to
 	either the spin-up ground state or the spin-down ground
-	state. These transistions do not have equal probability,
-	however, with the decay to the spin-up state being twice 
+	state. Though it can decay to either of these states, 
+	it does not do so with equal probability; the decay to 
+	the spin-up state being twice 
 	as likely~\cite{swenson}. 
 
 	The electrons that are in the spin-down state will remain
@@ -571,24 +577,67 @@ allowed transitions in the alkali atom will follow.
 	By this process, we then create a population of spin-down
 	electrons. The electrons exchange their spin with 
 	the nucleus, thereby giving a collection of spin-polarized
-	potassium atoms. 
+	potassium atoms. Though this approach works and makes 
+	intuitive sense, the same result can be realized in other 
+	ways.
 
 \section{Transverse Optical Pumping}
 To describe transverse optical pumping, we will compare it to 
 linear pumping and identify the similarities and differences.
 	\subsection{Required Setup}
 	The required setup for transverse pumping also requires
-	a magnetic field for the same reasons as previously indicated
-	but this time linearly polarized light is necessary.
+	a magnetic field for the same reasons as previously indicated.
+	The light this time will be linearly polarized.
 	Furthermore, the polarization direction of the light
 	must be aligned to be parallel with the magnetic field
 	used to preserve the spins. For concreteness we assume
 	that the magnetic field is oriented in the z-direction.
 
 	\subsection{Allowed Transitions}
+	Since our light is linearly polarized in the z-direction,
+	the vector and irreducible tensor notation, respectively, 
+	would be
 
+	\begin{equation}
+		\vec{E}=E_o \zhat \rightarrow E^{0}_{1}
+	\end{equation}
+
+	This irreducible tensor only modifies the $j$ quantum number
+	leaving the $m$ quantum number unmodified.
+
+	In spectroscopic notation, we can have either the transition
+	$4\prescript{2}{}S_{1/2} \rightarrow 4\prescript{2}{}P_{1/2}$
+	(with $m_j=1/2$)for the initially spin-down electron.
+	On the other hand, if we begin with a spin-up electron, we get 
+	$4\prescript{2}{}S_{1/2} \rightarrow 4\prescript{2}{}P_{1/2}$
+	(with $m_j=-1/2$)
+	for our electron transition. In each of the transitions
+	electron is changing its $m_s$ quantum number.
+	We again choose to focus on the second of these two 
+	transitions. 
+
+	Once this electron reaches the excited state it behaves in
+	the exact same way as it did in longitudinal pumping. It
+	decays into either of the two ground states with the decay
+	to the spin-up state being twice as likely. Now, however,
+	the spin-up state is the state without a pump which holds 
+	the atoms. This means that the atoms decay into the 
+	pumped state twice as fast as with longitudinal pumping. 
+	After an appropriate amount of time there will be few
+	remaining electrons in the spin-down state and the 
+	atom will become spin-polarized.
 
 \section{Conclusion}
+We have seen that both longitudinal and transverse pumping 
+can both result in the polarization of electrons and therefore
+an atom. Both these methods are achieved by using selection
+rules to preferentially populate a given spin state. Pumping with
+linearly polarized light is more efficient than pumping with 
+circularly polarized light because of the different transition
+rates from the excited states. To better understand if this
+method will be beneficial to implement, further research into the
+splitting of energy levels in the presence of a magnetic field would
+be needed.
 
 \bibliographystyle{plain}
 \bibliography{bibPotassium}
